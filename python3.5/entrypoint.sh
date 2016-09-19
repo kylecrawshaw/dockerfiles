@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VIRTUALENV="/data/py3env/"
+VIRTUALENV="/data/py3env"
 
 if [ ! -d "$VIRTUALENV" ]; then
     echo "Creating a new virtualenv in 'py3env/'"
@@ -9,5 +9,5 @@ fi
 
 . $VIRTUALENV/bin/activate
 cd /data
-echo "$@"
+echo "Running $@ in docker!"
 $@
